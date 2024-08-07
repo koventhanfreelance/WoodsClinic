@@ -114,12 +114,16 @@
         border-radius: 1.5em;
         margin: 0.5em;
         cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
       }
       .custom-badge:hover {
         background-color: #bfe9ff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
       .custom-badge.active {
         background-color: #a0fd04;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
@@ -238,87 +242,119 @@
             <!-- Contact details -->
             <h4>Consultation details:</h4>
             <p>Timings: 10am-6pm (MON-SAT)</p>
-            <p>Payment mode: online</p>
-            <a href="./appoinment/appoinment.html"
-              ><button class="btn btn-primary">Book Appointment</button></a
-            >
+            <p>Call for Appointments: +91 9363137138</p>
+            <h4>
+              <a href="./appoinment/appoinment.html" class="btn btn-primary mt-3"
+                >Book Appointment</a
+              >
+            </h4>
           </div>
         </div>
       </div>
     </section>
     <!-- Services Section -->
     <section id="service" class="py-5">
-      <div class="container mt-4">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Services</h2>
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Joint and Muscle Pain <br />
-              <a href="./services/jointpain.html">click </a></span
-            >
+          <!-- Service 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="./imgs/chairs.png"
+                alt="Service 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Acupuncture Treatment</h5>
+                <p class="card-text">
+                  Acupuncture involves the insertion of very thin needles
+                  through your skin at strategic points on your body.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Diabetes <br /><a href="./services/diabites.html">click </a></span
-            >
+          <!-- Service 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="./imgs/chairs.png"
+                alt="Service 2"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Acupressure Therapy</h5>
+                <p class="card-text">
+                  Acupressure therapy involves applying pressure to specific
+                  points on the body to relieve pain and promote relaxation.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Blood Pressure <br />
-              <a href="./services/BP.html">click </a></span
-            >
+          <!-- Service 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img
+                class="card-img-top"
+                src="./imgs/chairs.png"
+                alt="Service 3"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Physiotherapy</h5>
+                <p class="card-text">
+                  Physiotherapy helps to restore movement and function when
+                  someone is affected by injury, illness or disability.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Respiratory Problems <br /><a href="./services/res.html"
-                >click
-              </a></span
-            >
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Psychological Problems <br /><a href="./services/pscyological.html"
-                >click
-              </a></span
-            >
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Insomnia <br /><a href="./services/insomina.html">click </a></span
-            >
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Gastritis and Gut Problems<br /><a href="./services/gastric.html"
-                >click
-              </a></span
-            >
-          </div>
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-            <span class="custom-badge text-center"
-              >Others <br /><a href="./services/other.html">click </a></span
-            >
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <!-- Services as pills -->
+            <div class="nav nav-pills mb-4 justify-content-center">
+              <span class="custom-badge">Acupuncture Treatment</span>
+              <span class="custom-badge">Acupressure Therapy</span>
+              <span class="custom-badge">Physiotherapy</span>
+              <span class="custom-badge">Yoga Therapy</span>
+              <span class="custom-badge">Flower Remedy</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2024 Your Company. All rights reserved.</p>
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p class="mb-0">
+          &copy; 2024 Woods Clinic. All Rights Reserved. |
+          <a href="#" class="text-light">Privacy Policy</a> |
+          <a href="#" class="text-light">Terms of Service</a>
+        </p>
+      </div>
     </footer>
-    <!-- Bootstrap JS and jQuery -->
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-      document.querySelectorAll(".custom-badge").forEach((badge) => {
-        badge.addEventListener("click", function () {
-          document
-            .querySelectorAll(".custom-badge")
-            .forEach((b) => b.classList.remove("active"));
-          this.classList.add("active");
+      $(document).ready(function () {
+        // Handle hover effect
+        $(".custom-badge").hover(
+          function () {
+            if (!$(this).hasClass("active")) {
+              $(this).addClass("hover");
+            }
+          },
+          function () {
+            $(this).removeClass("hover");
+          }
+        );
+        // Handle active effect
+        $(".custom-badge").on("click", function () {
+          $(".custom-badge").removeClass("active");
+          $(this).addClass("active");
         });
       });
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
