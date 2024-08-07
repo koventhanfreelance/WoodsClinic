@@ -216,6 +216,9 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
             `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`,
             "_blank"
         );
+        
+        // Reset the form
+        document.getElementById("appointmentForm").reset();
     }, 1000);
 
     alert("Please click the WhatsApp web option if you are using desktop on the next step!");
