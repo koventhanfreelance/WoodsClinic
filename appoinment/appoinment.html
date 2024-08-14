@@ -197,6 +197,8 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
         Time Slot: ${slot_2}
         Mode: ${slot_3}`;
 
+    alert("Please click the WhatsApp web option if you are using desktop on the next step!");
+
     // Send details to owner's WhatsApp
     window.open(
         `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`,
@@ -214,7 +216,6 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
         document.getElementById("appointmentForm").reset();
     }, 1000);
 
-    alert("Please click the WhatsApp web option if you are using desktop on the next step!");
 });
 
     </script>
