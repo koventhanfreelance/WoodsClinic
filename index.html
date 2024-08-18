@@ -36,37 +36,47 @@
         color: #fff;
         width: 50px;
         height: 50px;
-      }/* Scrollbar customization for WebKit browsers (Chrome, Safari) */
-::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+      }
+      #scrollUp img {
+        width: 30px;
+        height: 30px;
+      }/* Customization for WebKit browsers (Chrome, Safari) */
+/* Targeting only the horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  height: 10px; /* Height of the horizontal scrollbar */
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Background color of the scrollbar track */
-  border-radius: 10px;
+::-webkit-scrollbar-track:horizontal {
+  background: #f1f1f1; /* Background color of the horizontal scrollbar track */
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: green; /* Color of the scrollbar handle */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: #daf7a6; /* Color of the horizontal scrollbar handle */
   border-radius: 10px;
   border: 2px solid #fff; /* Creates space around the scrollbar handle */
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:horizontal:hover {
   background-color: #555; /* Handle color when hovered */
 }
 
-/* Scrollbar customization for Firefox */
+/* For Firefox, applying color only to the horizontal scrollbar */
 html {
-  scrollbar-width: thin; /* Width of the scrollbar */
-  scrollbar-color: green #f1f1f1; /* Handle color, Track color */
+  scrollbar-color: initial; /* Reset vertical scrollbar to default */
 }
 
+body {
+  overflow-y: scroll; /* Ensure vertical scrollbar remains unaffected */
+}
 
-      #scrollUp img {
-        width: 30px;
-        height: 30px;
-      }
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+  background-color: green;
+}
+
       /* Custom CSS styles */
       .video {
         background: #fff;
