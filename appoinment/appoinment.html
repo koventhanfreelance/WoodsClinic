@@ -261,7 +261,7 @@ document.getElementById("appointmentForm").addEventListener("submit", function (
             `https://web.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
             `https://api.whatsapp.com/send?phone=${userWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
         
-         var win = window.open(whatsAppUrl, "_blank");
+         var win = window.open(whatsAppUrl, "_blank","noopener");
   win.focus();
         // Reset the form
         document.getElementById("appointmentForm").reset();
