@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
 <link rel="manifest" href="../favicon_io/site.webmanifest"> <style>
-    
+   
     <style>
         * {
             scroll-behavior: smooth;
@@ -90,7 +91,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="https://g.co/kgs/AYyU3gC" target="_blank">Reviews</a>
                     </li>
-                    
+                   
                     <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -157,7 +158,7 @@
                                 <option value="11 am - 2 pm">11 am - 2 pm</option>
                                 <option value="4:30 pm - 6:30 pm">4:30 pm - 6:30 pm</option>
                                 <option value="6:30 pm - 9:30 pm">6:30 pm - 9:30 pm</option>
-                                
+                               
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Book</button>
@@ -189,7 +190,7 @@
                   </a>
                 </div>
               </div>
-            </div> 
+            </div>
                     </div>
                 </div>
             </div>
@@ -198,7 +199,7 @@
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 120px">
-        <p>&copy; 2024 Woods Clinic. All Rights Reserved.</p>
+        <p>&copy; 2026 Woods Clinic. All Rights Reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and jQuery -->
@@ -206,60 +207,63 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <script>
-    document.getElementById("appointmentForm").addEventListener("submit", function (event) {
-        event.preventDefault();
+    <script>
+        document.getElementById("appointmentForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        const name = document.getElementById("name").value;
-        const mobile = document.getElementById("mobile").value;
-        const slot = document.getElementById("slot").value;
-        const slot_2 = document.getElementById("slot_2").value;
-        const slot_3 = document.getElementById("slot_3").value;
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+    const slot = document.getElementById("slot").value;
+    const slot_2 = document.getElementById("slot_2").value;
+    const slot_3 = document.getElementById("slot_3").value;
 
-        // Validation for default options
-        if (slot === "Select") {
-            alert("Please select a valid day.");
-            return;
-        }
+    // Check if the user selected the default option
+    if (slot === "Select") {
+        alert("Please select a valid day.");
+        return;
+    }
 
-        if (slot_2 === "Select") {
-            alert("Please select a valid time slot.");
-            return;
-        }
+    if (slot_2 === "Select") {
+        alert("Please select a valid time slot.");
+        return;
+    }
 
-        if (slot_3 === "Select") {
-            alert("Please select a valid mode.");
-            return;
-        }
+    if (slot_3 === "Select") {
+        alert("Please select a valid mode.");
+        return;
+    }
 
-        const ownerWhatsApp = "+919361692951";
-        const bookingDetails = `Booking Details:
-Name: ${name}
-Mobile: ${mobile}
-Day: ${slot}
-Time Slot: ${slot_2}
-Mode: ${slot_3}`;
+    const ownerWhatsApp = "+919361692951";
+    const bookingDetails = `Booking Details:
+        Name: ${name}
+        Mobile: ${mobile}
+        Day: ${slot}
+        Time Slot: ${slot_2}
+        Mode: ${slot_3}`;
 
-        // Detect if the user is on a desktop
-        function isDesktop() {
-            return !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-        }
 
-        // Send details to owner's WhatsApp directly
-        const whatsAppUrl = isDesktop() ?
-            `https://web.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
-            `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+    // Function to detect if the user is on a desktop
+    function isDesktop() {
+        return !/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    }
 
-        const link = document.createElement('a');
-        link.href = whatsAppUrl;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.click();
+    // Send details to owner's WhatsApp
+    const whatsAppUrl = isDesktop() ?
+        `https://web.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}` :
+        `https://api.whatsapp.com/send?phone=${ownerWhatsApp}&text=${encodeURIComponent(bookingDetails)}`;
+   
+  const link = document.createElement('a');
+  link.href = whatsAppUrl;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.click();
+   
+    // Reset the form
+    document.getElementById("appointmentForm").reset();
+});
 
-        // Reset the form
-        document.getElementById("appointmentForm").reset();
-    });
-</script>
+    </script>
+
 </body>
 
 </html>
